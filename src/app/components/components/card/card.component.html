@@ -1,0 +1,13 @@
+<div class="card my-2" *ngIf="singleWorkflow">
+    <div class="card-body">
+        <div class="float-end">
+            <div class="status-card font-normal" [ngClass]="singleWorkflow.status.toLowerCase().replaceAll(' ', '')">
+                {{singleWorkflow.status}}
+            </div>
+        </div>
+        <h5 class="card-title font-bold">Work Flow: {{singleWorkflow.title}}</h5>
+        <p class="card-text mb-1 font-normal"><span class="gray-color font-light me-2">From:</span>{{singleWorkflow.from}}</p>
+        <p class="card-text mb-1 font-normal"><span class="gray-color font-light me-2">To:</span>{{singleWorkflow.to}}</p>
+        <p class="card-text mb-1 font-normal text-red"><span class="gray-color me-2">Due Date:</span>{{singleWorkflow.dueDate | date :  "dd MMMM"}}</p>
+    </div>
+</div>

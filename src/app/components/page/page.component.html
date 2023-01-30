@@ -1,0 +1,50 @@
+<app-navbar></app-navbar>
+<div class="page-container m-4 bg-white">
+  <div class="search-container">
+    <h2 class="mb-4 mx-3 bold-text">Submissions</h2>
+    <div class="row">
+      <form class="d-flex">
+        <div style="width: 334px" class="mx-3">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        </div>
+        <div style="width: 209px;" class="mx-3">
+          <select class="form-select" aria-label="Default select example">
+            <option selected>Select Form</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+          </select>
+        </div>
+        <div style="width: 209px;" class="mx-3">
+          <select class="form-select" aria-label="Default select example">
+            <option selected>Select Status</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+          </select>
+        </div>
+        <div style="width: 209px;" class="mx-3">
+          <input class="form-control me-2" type="date" placeholder="dd-mm-yyyy" value=""
+          min="1997-01-01" max="2030-12-31">
+        </div>
+        <div class="ms-auto d-flex">
+          <div class="btn-group" role="group" aria-label="Basic outlined example">
+            <button type="button" class="btn btn-outline-primary active">Map</button>
+            <button type="button" class="btn btn-outline-primary">List</button>
+          </div>
+          <div>
+            <img alt="Export Icon" src="/assets/icons/export.png" />
+            Export
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="row mt-4 mx-2">
+    <div class="col-4">
+        <app-card *ngFor="let item of flows; let i = index" [singleWorkflow]="item"></app-card>
+    </div>
+    <div class="col-8">
+      <app-map class="my-2"></app-map>
+    </div>
+  </div>
+</div>

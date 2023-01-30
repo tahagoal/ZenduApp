@@ -1,1 +1,57 @@
 /* You can add global styles to this file, and also import other style files */
+@import "../src/assets/css/variables.scss";
+
+*{
+    font-family: 'Roboto';
+}
+
+.navbar-primary{
+    background-color: $color-primary;
+}
+
+.text-red{
+    color: $color-error;
+}
+
+.gray-color{
+    color: $color-black-border;
+}
+
+.status-card.uncomplete{
+    color: $color-error;
+    border-color: $color-error;
+
+    &::before{
+        background-color: $color-error;
+    }
+}
+
+.status-card.lowrisk{
+    border-color: $color-success;
+    color: $color-success;
+
+    &::before{
+        background-color: $color-success;
+    }
+}
+
+.status-card.needsreview{
+    border-color: $color-black-border;
+    color: $color-black-border;
+
+    &::before{
+        background-color: $color-black-border;
+    }
+}
+
+.bold-text{
+    font-weight: $bold-text;
+}
+
+.normal-text{
+    font-weight: $normal-text;
+}
+
+.light-text{
+    font-weight: $light-text;
+}

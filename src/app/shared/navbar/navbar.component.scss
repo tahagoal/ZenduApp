@@ -1,0 +1,21 @@
+.navbar{
+    height: 72px;
+}
+
+.nav-link{
+    font-size: 18px;
+}
+
+.navbar-brand {
+    font-size: 32px;
+}
+
+.nav-item {
+    padding: 0px 8px;
+    align-self: center !important;
+    max-height: 100%;
+}
+
+.nav-item.active {
+    background-color: #1773BB;
+}
