@@ -1,11 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-map',
   templateUrl: './map.component.html',
   styleUrls: ['./map.component.scss']
 })
-export class MapComponent implements OnInit {
+export class MapComponent {
   markerPositions: google.maps.LatLngLiteral[] = [
     {
       lat: 24,
@@ -16,7 +16,6 @@ export class MapComponent implements OnInit {
       lng:28
     }
   ];
-  display: any;
   center: google.maps.LatLngLiteral = {
     lat: 24,
     lng: 12
@@ -26,8 +25,6 @@ export class MapComponent implements OnInit {
     draggable: false
   };
     
-  ngOnInit(): void { }
-  
   addMarker(event: google.maps.MapMouseEvent) {
     if (event.latLng != null) this.markerPositions.push(event.latLng.toJSON());
   }
