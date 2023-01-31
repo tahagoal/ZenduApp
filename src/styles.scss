@@ -9,6 +9,19 @@
     background-color: $color-primary;
 }
 
+.font-primary{
+    color: $color-primary;
+}
+
+.btn-outline-primary{
+    border-color: $color-primary !important;
+}
+
+.btn.active, .btn:active, .btn:hover{
+    background-color: $color-primary !important;
+    color: white !important;
+}
+
 .text-red{
     color: $color-error;
 }
